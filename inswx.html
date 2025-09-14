@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ritam — Order Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div>
+          <h1>Ritam's Orders</h1>
+          <p class="muted">এই লিংক শেয়ার করলে সবাই তোমাকে অর্ডার/মেসেজ পাঠাতে পারবে</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Order / Contact Form</h2>
+      <p class="muted">
+        নিচের ফর্ম পূরণ করলে মেসেজ সরাসরি তোমার ইমেইলে যাবে: 
+        <strong>ritamd758@gmail.com</strong>
+      </p>
+
+      <!-- Formsubmit ব্যবহার -->
+      <form id="orderForm" action="https://formsubmit.co/ritamd758@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Order from Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="">
+
+        <label>তোমার নাম
+          <input type="text" name="name" id="name" required placeholder="তোমার নাম লিখো" />
+        </label>
+
+        <label>ফোন / WhatsApp
+          <input type="text" name="phone" id="phone" placeholder="ফোন নাম্বার (optional)" />
+        </label>
+
+        <label>Order / Message
+          <textarea name="message" id="message" required placeholder="অর্ডারের বিস্তারিত বা মেসেজ..."></textarea>
+        </label>
+
+        <label>Email (যদি দিতে চাও)
+          <input type="email" name="user_email" id="user_email" placeholder="তোমার ইমেইল (optional)" />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Order</button>
+          <button type="button" class="btn btn-outline" id="mailtoBtn">Open Mail</button>
+        </div>
+
+        <div id="formStatus" class="small muted" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small muted">
+      © <span id="year"></span> Ritam • Built with ❤
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

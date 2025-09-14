@@ -1,0 +1,29 @@
+:root {
+  --bg:#f7fafc; --card:#ffffff; --accent:#0f62fe; --muted:#6b7280;
+  --radius:12px; --container:1100px;
+  font-family: "Noto Sans", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0b1220}
+.container{max-width:var(--container);margin:0 auto;padding:18px}
+
+.site-header{background:linear-gradient(90deg,#071032,#0b1220);color:#fff;padding:16px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c4dff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+.site-header h1{margin:0;font-size:18px}
+.muted{color:var(--muted)}
+
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(12,18,30,0.06);margin-bottom:16px}
+
+label{display:block;margin-top:12px;font-weight:600}
+input, textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:6px;background:#fbfcfe;font-size:14px
+}
+textarea{min-height:120px;resize:vertical}
+.form-actions{margin-top:14px;display:flex;gap:10px}
+.btn{padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+.btn-outline{background:transparent;border:2px solid #e6eefc;color:var(--accent)}
+
+.small{font-size:13px}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);margin-top:8px}
